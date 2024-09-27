@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Nunito, sans-serif;
+}
+
+main {
+  padding-inline: 24px;
+}
+
+.main-container-home {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.header-content {
+  cursor: pointer;
+  align-items: center;
+  gap: 3px;
+  display: flex;
+}
+
+.header {
+  color: #f5f5f5;
+  background-color: #0a0a25;
+  height: 5rem;
+  padding-inline: 24px;
+}
+
+.header .header-cont {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+}
+
+.moonImage, .sunImage {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  height: 32px;
+}
+
+.magnifying-glass {
+  background-color: #fff;
+  height: 25px;
+}
+
+.search-bar-input {
+  border: hidden;
+  border-radius: 50px;
+  outline-color: #fff;
+  max-width: 250px;
+  padding: 15px;
+}
+
+.search-bar-div {
+  background-color: #fff;
+  border-radius: 15px;
+  align-items: center;
+  gap: 1rem;
+  max-width: 300px;
+  padding: 0 15px;
+  display: flex;
+  box-shadow: .1px .1px 3px;
+}
+
+.searchBar-dropdown {
+  margin: 0 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+#dropdown {
+  border: none;
+  border-radius: 15px;
+  outline-color: #e6e3e3;
+  width: 200px;
+  height: 50px;
+  padding-left: 15px;
+  box-shadow: .1px .1px 3px;
+}
+
+.country-card, .shimmer-card {
+  border-radius: 10px;
+  width: 250px;
+  height: 320px;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 5px;
+}
+
+.country-card:hover {
+  width: 246px;
+  height: 318px;
+}
+
+.country-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+.shimmer-image {
+  background-color: gray;
+  width: 100%;
+  height: 150px;
+}
+
+.country-details {
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+.shimmer-details {
+  background-color: #b8b4b4;
+  flex-direction: column;
+  gap: 10px;
+  height: calc(100% - 150px);
+  padding: 10px;
+  display: flex;
+}
+
+.shimmer-details p, .shimmer-details h3 {
+  background: #7c7979;
+  width: 98%;
+  height: 20%;
+  margin: 5px 0;
+}
+
+.country-details div p {
+  margin: 5px 0;
+}
+
+.countries-list-container, .shimmer-main {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+}
+
+main {
+  min-height: calc(100vh - 5rem);
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.countryDetailCard, .country-detail-card-shimmer {
+  min-height: calc(100vh - 5rem);
+  padding: 30px;
+}
+
+.countryDetailCard-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.country-detail-card-shimmer .button {
+  background-color: #999797;
+  width: 80px;
+  height: 30px;
+  padding: 10px;
+}
+
+.backBtn {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  box-shadow: 0 0 6px;
+}
+
+.backBtn:hover {
+  box-shadow: 0 0 3px;
+}
+
+.countryDetailsContainer, .country-details-container-shimmer {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5%;
+  max-width: 100%;
+  height: 500px;
+  padding-left: 5%;
+  display: flex;
+}
+
+.details, .details-shimmer {
+  flex-flow: column wrap;
+  min-width: 500px;
+  height: 250px;
+  display: flex;
+}
+
+.countryDetails, .country-details-shimmer {
+  width: 50%;
+  height: 300px;
+}
+
+.country-details-shimmer h1 {
+  background-color: #424040;
+  width: 200px;
+  height: 2rem;
+}
+
+.countryDetails p {
+  flex-wrap: wrap;
+  padding: 3px;
+  display: flex;
+}
+
+.details-shimmer p {
+  background-color: #7c7979;
+  width: 70%;
+  height: 1.5rem;
+  margin: 3px;
+  padding: 6px;
+}
+
+.details p {
+  width: 50%;
+  margin: auto;
+  padding: 6px;
+}
+
+.countryDetailsContainer img {
+  width: 40%;
+  height: 60%;
+}
+
+.countryDetailsContainer {
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  display: flex;
+}
+
+.country-details-container-shimmer .image {
+  background-color: gray;
+  width: 400px;
+  height: 300px;
+}
+
+.error-page {
+  height: calc(100vh - 5rem);
+  min-height: 600px;
+  padding: 30px;
+}
+
+.border-link {
+  color: #000;
+  cursor: pointer;
+  background-color: #fff;
+  border: .6px solid #000;
+  border-radius: 3px;
+  margin: 3px;
+  padding: 3px;
+}
+/*# sourceMappingURL=index.css.map */
