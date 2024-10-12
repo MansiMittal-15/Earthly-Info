@@ -134,7 +134,6 @@ const CardDetail = ({ mainColor, color, mode }) => {
                 <p>
                   <b>Capital:-</b> &nbsp;<span>{countryData.capital}</span>{" "}
                 </p>
-
                 <p>
                   <b>Top Level Domains:- </b> &nbsp;
                   <span> {countryData.topLevelDomain} </span>{" "}
@@ -151,7 +150,7 @@ const CardDetail = ({ mainColor, color, mode }) => {
                 </p>
               </div>
               {countryData.borders.length !== 0 && (
-                <p style={{ padding: "6px" }}>
+                <p style={{ padding: "6px" }} >
                   <b>Border Countries:-</b> &nbsp;
                   {countryData.borders.map((border) => (
                     <Link

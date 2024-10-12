@@ -29,6 +29,8 @@ main{
     color: whitesmoke;
     background-color: rgb(10, 10, 37);
     height: 5rem;
+    position: sticky;
+    top: 0;
 }
 
 .header .header-cont{
@@ -96,11 +98,11 @@ main{
     margin: 10px;
     overflow: hidden;
     border-radius: 10px;
+    transition: all 0.2s ease-in-out;
 }
 
 .country-card:hover{
-    width: 246px;
-    height: 318px;
+    transform: scale(1.03);
 }
 
 .country-card img{
@@ -143,10 +145,12 @@ main{
     margin: 5px 0;
 }
 
-.countries-list-container, .shimmer-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.countries-list-container, .shimmer-main{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-inline: auto;
+    max-width: 1200px;
+    gap: 32px;
 }
 
 main{
@@ -192,25 +196,23 @@ a{
 
 .countryDetailsContainer, .country-details-container-shimmer{
     display: flex;
-    padding-left: 5%;
     align-items: center;
-    height: 500px;
-    gap: 5%;
-    flex-wrap: wrap;
-    max-width: 100%; 
+    gap: 64px;
+    margin-top: 64px; 
 }
 
 
 .details, .details-shimmer{
     display: flex;
     flex-direction: column;
-    height: 250px;
+    row-gap: 12px;
+    column-gap: 16px;
+    max-height: 180px;
     flex-wrap: wrap; 
-    min-width: 500px;
+    max-width: 50%; 
 }
 
-.countryDetails, .country-details-shimmer{
-    height: 300px;
+.countryDetails, .country-details-shimmer{ 
     width: 50%;
 }
 
@@ -221,10 +223,13 @@ a{
 }
 
 .countryDetails p{
-    padding: 3px;
+    margin-top: 48px; 
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
+    gap: 8px; 
 }
+
 
 .details-shimmer p{
     padding: 6px;
@@ -234,15 +239,14 @@ a{
     margin: 3px;
 }
 
-.details p{
-    padding: 6px;
-    margin: auto;
+.details p{ 
+    margin: 0; 
     width: 50%;
 }
 
 .countryDetailsContainer img{
     width: 40%;
-    height: 60%; 
+    border: 1px solid #ddd; 
 }
 
 .countryDetailsContainer{
@@ -250,8 +254,7 @@ a{
     justify-content: center;
     align-items: center; 
     flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 100%;
+    flex-direction: row; 
 }
 
 .country-details-container-shimmer .image{
@@ -274,4 +277,43 @@ a{
     color: black;
     background-color: white;
     cursor: pointer;
+}
+
+ 
+@media (max-width: 768px) {
+    .countries-list-container { 
+        justify-items: center;
+    }
+
+    .header h1{
+        font-size: 24px;
+    } 
+}
+
+@media (max-width: 1032px) {
+    .countryDetailsContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+        gap: 16px;
+    }
+
+    .details {
+        max-height: unset;
+        max-width: unset;
+    }
+
+    .details p {
+        width: unset;
+    }
+
+    .countryDetailsContainer img{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .countryDetails {
+        height: unset;
+        width: unset;
+    }
 }
