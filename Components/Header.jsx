@@ -6,7 +6,7 @@ const Header = ({ changeMode, mode, bgc, color }) => {
     <>
       <header className="header" style={{ backgroundColor: bgc, color: color }}>
         <div className="header-cont">
-          <h1>Where in the World?</h1>
+          <h1>Earthly Info</h1>
           <div className="header-content" onClick={changeMode}>
             {mode ? (
               <img src={Sun} alt="Sun" className="sunImage" />
